@@ -1,0 +1,71 @@
+package milestone.banco.model;
+
+import java.util.ArrayList;
+
+/*
+ * Programação Orientada a Objetos
+ * Milestone 2
+ * Discente:
+ * 
+ */
+public class Cliente {
+
+	private String cpf;
+    private String nome;
+    private ArrayList<Conta> contas;
+
+    public Cliente(String cpf, String nome) {
+        this.cpf = cpf;
+        this.nome = nome;
+        this.contas = new ArrayList<>();
+    }
+    
+    /*
+     * Método recebe uma conta a ser adicionada no arraylist de contas
+     * do cliente. Antes de adicioná-la, deve-se verificar se já existe uma
+     * conta existente. Para uma adição realizada com sucesso, deve-se retornar 
+     * true. Caso contrário, false.
+     */
+    public boolean adicionarConta(Conta conta) {
+        return false;
+    }
+
+    /*
+     * Método recebe uma conta a ser removida do arraylist de contas
+     * do cliente. Antes de remove-la, deve-se verificar se a conta existe no
+     * array. Para uma remoção realizada com sucesso, deve-se retornar 
+     * true. Caso contrário, false.
+     */
+    public boolean removerConta(String numeroConta) {
+        return false;
+    }
+
+    /*
+     * Método recebe uma número de conta como argumento a fim
+     * de verificar se existe o elemento com tal número no array.
+     * Caso exista, retorne o elemento consultado, caso contrário
+     * retorne null.
+     * 
+     */
+    public Conta localizarConta(String numeroConta) {
+        return null;
+    }
+    
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+ 
+}
