@@ -16,6 +16,7 @@ public class Conta {
     private LocalDateTime dataAbertura;
     private boolean status;
 
+    //Não alterar o construtor
     public Conta(String numero, BigDecimal saldoInicial, LocalDateTime dataAbertura) {
         this.numero = numero;
         this.saldo = saldoInicial;
@@ -23,6 +24,11 @@ public class Conta {
         this.dataAbertura = dataAbertura;
      // Supondo que a conta esteja ativa ao ser criada
         this.status = true; 
+    }
+    
+    //Não alterar o construtor
+    public Conta(String numero) {
+    	this.numero = numero;
     }
 
     /*
@@ -60,6 +66,7 @@ public class Conta {
         
     }
     
+    //Não alterar os métodos abaixo 
     @Override
 	public int hashCode() {
 		return Objects.hash(numero);

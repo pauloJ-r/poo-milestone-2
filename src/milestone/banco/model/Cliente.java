@@ -14,6 +14,7 @@ public class Cliente {
     private String nome;
     private ArrayList<Conta> contas;
 
+    //Não alterar o construtor
     public Cliente(String cpf, String nome) {
         this.cpf = cpf;
         this.nome = nome;
@@ -27,17 +28,20 @@ public class Cliente {
      * true. Caso contrário, false.
      */
     public boolean adicionarConta(Conta conta) {
-        return false;
+        
+    	return false;
     }
 
     /*
-     * Método recebe uma conta a ser removida do arraylist de contas
+     * Método recebe um número de conta a ser removida do arraylist de contas
      * do cliente. Antes de remove-la, deve-se verificar se a conta existe no
-     * array. Para uma remoção realizada com sucesso, deve-se retornar 
-     * true. Caso contrário, false.
+     * array. Para tanto, implemente o método localizarConta deste método, pois 
+     * convém utilizá-lo no escopo deste método. Para remoção realizada com sucesso, 
+     * deve-se retornar true. Caso contrário, false.
      */
     public boolean removerConta(String numeroConta) {
-        return false;
+        
+    	return false;
     }
 
     /*
@@ -48,10 +52,12 @@ public class Cliente {
      * 
      */
     public Conta localizarConta(String numeroConta) {
-        return null;
+        
+    	return null;
     }
     
 
+    //Não alterar os métodos abaixo
     public String getCpf() {
         return cpf;
     }

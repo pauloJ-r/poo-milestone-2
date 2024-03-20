@@ -22,11 +22,25 @@ class ContaTest {
         conta.sacar(new BigDecimal("100.00"));
         assertEquals(new BigDecimal("900.00"), conta.getSaldo());
     }
+    
+    @Test
+    void sacarSaldoIndisponivel() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            conta.sacar(new BigDecimal("2000.00"));
+        });
+    }
 
     @Test
     void depositar() {
         conta.depositar(new BigDecimal("200.00"));
         assertEquals(new BigDecimal("1200.00"), conta.getSaldo());
+    }
+    
+    @Test
+    void depositarQuantiaNegativa() {
+        assertThrows(IllegalArgumentException.class, () -> {
+            conta.depositar(new BigDecimal("-500.00"));
+        });
     }
 
     @Test
